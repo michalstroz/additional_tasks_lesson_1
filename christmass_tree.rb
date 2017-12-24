@@ -17,7 +17,7 @@ def christmass_top (x = 7)
   end
 end
 
-def christmass_tree_height (x, h)
+def christmass_tree_flor (x)
   3.step(x, 2) do |i|
     (x-1).times do
       print " "
@@ -29,3 +29,6 @@ def christmass_tree_height (x, h)
     x -= 1
   end
 end
+
+christmass_top (width)
+christmass_tree_flor (width)
