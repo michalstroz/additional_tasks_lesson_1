@@ -22,7 +22,7 @@
       if z == 0
         print "%-3d" % (i-1)
       elsif z == 1
-        print "%-2s" % "|"
+        print "%-3s" % "|"
       else
         print "%-4d" % ((i-1)*(z-1))
       end
