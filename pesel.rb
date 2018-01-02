@@ -1,6 +1,7 @@
 def check_pesel number
   array = []
-  number_of_digits = Math.log10(number).to_i+1
+  number_of_digits = number.length
+  number = number.to_i
   if number_of_digits != 11 || number < 0
     return 0
   else
@@ -75,7 +76,7 @@ def check_sex array
   end
 end
 
-pesel = check_pesel ARGV[0].to_i
+pesel = check_pesel ARGV[0]
 error_message = "Pesel #{ARGV[0]} jest nieprawidłowy."
 
 if pesel == 0
