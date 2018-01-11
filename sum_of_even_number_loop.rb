@@ -1,7 +1,7 @@
 def sum_of_even range
 i = 0
 sum = 0
-  while i != range
+  while i <= range
     if i%2 == 0
       sum += i
     end

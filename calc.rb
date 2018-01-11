@@ -1,33 +1,27 @@
-def actions number
-  order_1 = "Enter first number: "
-  order_2 = "Enter second number: "
+def receiving_data
+  puts "Enter first number: "
+  number_1 = gets.to_f
+  puts "Enter second number: "
+  number_2 = gets.to_f
 
+  return number_1, number_2
+end
+
+def actions number
   case number
   when 1
-    print order_1
-    number_1 = gets.to_f
-    print order_2
-    number_2 = gets.to_f
-    return number_1 + number_2
+    array =  receiving_data
+    return array[0] + array[1]
   when 2
-    print order_1
-    number_1 = gets.to_f
-    print order_2
-    number_2 = gets.to_f
-    return number_1 - number_2
+    array =  receiving_data
+    return array[0] - array[1]
   when 3
-    print order_1
-    number_1 = gets.to_f
-    print order_2
-    number_2 = gets.to_f
-    return number_1 * number_2
+    array =  receiving_data
+    return array[0] * array[1]
   when 4
-    print order_1
-    number_1 = gets.to_f
-    print order_2
-    number_2 = gets.to_f
-    if number_2 != 0
-      return number_1/number_2
+    if array[1] != 0
+      array =  receiving_data
+      return array[0] / array[1]
     else
       puts "Bad values were given."
     end

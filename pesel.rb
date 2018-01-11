@@ -68,11 +68,10 @@ def check_day year, month, array
 end
 
 def check_sex array
-  sex = "płeć: "
   if array[9]%2 == 0
-    puts " - #{sex}kobieta"
+    sex = "kobieta"
   else
-    puts " - #{sex}mężczyzna"
+    sex = "mężczyzna"
   end
 end
 
@@ -94,7 +93,7 @@ else
     else
       puts "Pesel #{ARGV[0]} jest prawidłowy."
       puts "Informacje o peselu:"
-      check_sex pesel
+      puts "Płeć: #{check_sex pesel}"
       puts " - data urodzenia: #{day}-#{month}-#{year}"
     end
   end
